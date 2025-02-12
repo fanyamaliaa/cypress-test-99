@@ -1,0 +1,105 @@
+// const assert = require('assert');
+// const { Given, When, Then } = require('@cucumber/cucumber');
+
+
+// Given('user mengakses halaman signup', function () {
+//   this.page = "sign-up";
+// });
+
+
+// When("user tidak mengisi nama", function () {
+//   this.nama = ""
+//   return this.nama;
+// })
+
+
+
+
+
+
+// Then("munculkan pesan error", function () {
+//   assert.strictEqual(this.nama, "");
+// })
+
+
+// When("user mengisi nama Fany", function () {
+//   this.nama = "Fany"
+// })
+
+
+// When("user mengisi email fany@yopmail.com", function () {
+//   this.email = "fany@yopmail.com"
+// }
+// )
+
+
+// Then("user berhasil masuk, function () {
+//   assert.strictEqual(this.nama, "Fany");
+// })
+
+
+//import { Given, When, Then } from "@cucumber/cucumber";
+
+
+// Given("user mengakses halaman signup", () => {
+//   cy.visit("https://www.99.co/singapore/signup");
+// });
+const { Given, When, Then } = require("@cucumber/cucumber");
+
+
+Given("the user is on the 99.co signup page", function () {
+  console.log("User navigates to the signup page");
+});
+
+
+When("the user enters a valid name {string}", function (name) {
+  console.log(`Entered name: ${name}`);
+});
+
+
+
+
+When("the user enters a valid email {string}", function (email) {
+  console.log(`Entered email: ${email}`);
+});
+
+
+When("the user enters a valid phone number {string}", function (phone) {
+  console.log(`Entered phone number: ${phone}`);
+});
+
+
+When("the user enters a valid password {string}", function (password) {
+  console.log(`Entered password: ${password}`);
+});
+
+
+When("the user clicks the sign-up button", function () {
+  console.log("Clicked the signup button");
+});
+
+
+Then("the user should see a confirmation message {string}", function (message) {
+  console.log(`Confirmation message: ${message}`);
+});
+
+
+Then("the user should be redirected to the homepage", function () {
+  console.log("User redirected to homepage");
+});
+
+
+When("the user not input name", function () {
+ this.name = ""
+ return this.name;
+});
+
+
+Then("the user should see an error message {string}", function (message) {
+  console.log(`Error Message Displayed: ${message}`);
+});
+
+
+
+
+
